@@ -4,6 +4,7 @@
 //
 //  Created by eric on 2022-03-11.
 //
+//  Must update schemaVersion every when changing the schema of a model
 
 import Foundation
 import UIKit

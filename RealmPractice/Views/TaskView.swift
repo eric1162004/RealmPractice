@@ -10,12 +10,16 @@ import SwiftUI
 
 struct TaskView: View {
     
+    // use a task view model
     @EnvironmentObject private var viewModel: TaskViewModel
     
+    // toggle to return to the main navigation view
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
+    // for updating a task title
     @State private var taskTitle: String = ""
     
+    // initize this view with a task
     let task: Task
     
     var body: some View{
@@ -55,6 +59,8 @@ struct TaskView: View {
     
     private func deleteAction(){
         viewModel.remove(id: task.id)
+        
+        // return to the main navigation view
         presentationMode.wrappedValue.dismiss()
     }
     

@@ -23,6 +23,7 @@ final class TaskViewModel: ObservableObject {
         token?.invalidate()
     }
     
+    // setup an observer
     private func setupObserver() {
         do {
             let realm = try Realm()
@@ -33,12 +34,13 @@ final class TaskViewModel: ObservableObject {
                     .sorted(by: { $0.completedAt > $1.completedAt})
                     .sorted(by: { !$0.completed && $1.completed})
             })
+            
         } catch let error {
             print(error.localizedDescription)
         }
     }
     
-    // add
+    // add a task
     func addTask(title: String){
         let taskObject = TaskObject(value: [
             "title": title,
@@ -54,6 +56,7 @@ final class TaskViewModel: ObservableObject {
         }
     }
     
+    // update completion bool
     func markComplete(id: String, completed: Bool) {
         do {
             let realm = try Realm()
@@ -68,6 +71,7 @@ final class TaskViewModel: ObservableObject {
         }
     }
     
+    // remove a task
     func remove(id: String){
         do{
             let realm = try Realm()
@@ -82,6 +86,7 @@ final class TaskViewModel: ObservableObject {
         }
     }
     
+    // update a task title
     func updateTitle(id: String, newTitle: String){
         do {
             let realm = try Realm()
@@ -95,6 +100,7 @@ final class TaskViewModel: ObservableObject {
         }
     }
     
+    // update a task
     func update(id: String, newTitle: String, dueDate: Date?) {
         do {
             let realm = try Realm()

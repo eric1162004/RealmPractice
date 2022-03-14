@@ -71,9 +71,9 @@
 		0767A56327DBBC7C00E8BE5A /* RealmPractice */ = {
 			isa = PBXGroup;
 			children = (
+				0767A57727DBBF7000E8BE5A /* Models */,
 				0767A58427DBC99B00E8BE5A /* ViewModels */,
 				0767A57A27DBBFEC00E8BE5A /* Views */,
-				0767A57727DBBF7000E8BE5A /* Models */,
 				0767A56427DBBC7C00E8BE5A /* RealmPracticeApp.swift */,
 				0767A58927DBD8FC00E8BE5A /* AppDelegate.swift */,
 				0767A56827DBBC7D00E8BE5A /* Assets.xcassets */,

@@ -10,9 +10,15 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
+        
+        // wrap with a navigation view
         NavigationView {
             VStack{
+                
+                // a view to add a task
                 AddTaskView()
+                
+                // a view to list all task
                 TaskListView()
             }
                 .navigationTitle("Todo")

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TaskListView: View {
     
+    // use a taskViewModel
     @EnvironmentObject private var viewModel: TaskViewModel
     
     var body: some View {
@@ -19,8 +20,10 @@ struct TaskListView: View {
                 ForEach(viewModel.tasks, id: \.id) { task in
                     
                     NavigationLink {
+                        // navigate to a task detail view
                         TaskView(task: task)
                     } label: {
+                        // task row view
                         TaskRowView(task: task)
                     }
 

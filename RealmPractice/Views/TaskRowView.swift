@@ -10,14 +10,17 @@ import SwiftUI
 
 struct TaskRowView: View  {
     
+    // initialize with a task
     let task: Task
+    
+    // use taskViewModel
     @EnvironmentObject private var viewModel: TaskViewModel
     
     var body: some View {
         
         HStack(spacing: 8){
             Button {
-                // mask complete action
+                // mark complete action
                 viewModel.markComplete(
                     id: task.id,
                     completed: !task.completed)
