@@ -32,11 +32,7 @@ struct ProductListView: View {
     var body: some View {
         
         VStack(alignment: .leading){
-            
-            NavigationLink (destination: AddProductView()){
-                Image(systemName: "plus")
-            }
-        
+                
             // comment row
             ScrollView(.horizontal){
                 HStack(spacing:10){
@@ -60,9 +56,17 @@ struct ProductListView: View {
             Spacer()
             
         }
+        .navigationBarTitleDisplayMode(.inline)
         .navigationBarTitle("StoreFront")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing){
+                NavigationLink (destination: AddProductView()){
+                    Image(systemName: "plus")
+                }
+            }
+        }
         .padding()
-        .background(.gray)
+        .background()
         
     }
 }
@@ -74,7 +78,7 @@ struct AddProductView: View {
     @State private var productPrice: String = ""
     
     // toggle to return to the main navigation view
-//    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     // use a task view model
     @EnvironmentObject private var productVM: ProductViewModel
@@ -92,14 +96,20 @@ struct AddProductView: View {
                 productVM.addProduct(
                     title: productTitle,
                     price: Float(productPrice) ?? 0)
+                
+                presentationMode.wrappedValue.dismiss()
             } label: {
                 Text("Submit")
             }
+            .padding()
             .overlay {
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.blue, lineWidth: 4)
+                    .stroke(Color.blue, lineWidth: 1)
             }
+            
+            Spacer()
         }
+        .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("Add an item")
         .padding()
     }
