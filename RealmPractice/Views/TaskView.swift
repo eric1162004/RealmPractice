@@ -42,7 +42,7 @@ struct TaskView: View {
             }
             Spacer()
         }
-        .navigationTitle("Edit Todo")
+        .navigationTitle("Add an item")
         .navigationBarTitleDisplayMode(.inline)
         .padding(24)
         .onAppear {

@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 @main
 struct RealmPracticeApp: App {
 
@@ -15,8 +14,8 @@ struct RealmPracticeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(TaskViewModel())
+            ProductContentView()
+                .environmentObject(ProductViewModel())
         }
     }
 }

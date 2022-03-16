@@ -20,7 +20,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     private func configMigration() {
         // perform migration if necessary
         let config = Realm.Configuration(
-            schemaVersion: 2,
+            schemaVersion: 3,
             migrationBlock: { migration, oldSchemaVersion in
                 // additional process such as rename, combine fields and link to other object
             })

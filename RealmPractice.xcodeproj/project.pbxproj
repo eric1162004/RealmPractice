@@ -21,6 +21,7 @@
 		0767A58627DBC9B200E8BE5A /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767A58527DBC9B200E8BE5A /* TaskViewModel.swift */; };
 		0767A58827DBD12E00E8BE5A /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767A58727DBD12E00E8BE5A /* TaskView.swift */; };
 		0767A58A27DBD8FC00E8BE5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767A58927DBD8FC00E8BE5A /* AppDelegate.swift */; };
+		95A9833027E255A000CBA621 /* ProductContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A9832F27E255A000CBA621 /* ProductContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		0767A58527DBC9B200E8BE5A /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		0767A58727DBD12E00E8BE5A /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		0767A58927DBD8FC00E8BE5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		95A9832F27E255A000CBA621 /* ProductContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				0767A56627DBBC7C00E8BE5A /* ContentView.swift */,
 				0767A58027DBC66E00E8BE5A /* AddTaskView.swift */,
 				0767A58727DBD12E00E8BE5A /* TaskView.swift */,
+				95A9832F27E255A000CBA621 /* ProductContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				0767A58127DBC66E00E8BE5A /* AddTaskView.swift in Sources */,
 				0767A58327DBC8A200E8BE5A /* TaskObject.swift in Sources */,
 				0767A58627DBC9B200E8BE5A /* TaskViewModel.swift in Sources */,
+				95A9833027E255A000CBA621 /* ProductContentView.swift in Sources */,
 				0767A57D27DBC01700E8BE5A /* TaskRowView.swift in Sources */,
 				0767A58A27DBD8FC00E8BE5A /* AppDelegate.swift in Sources */,
 				0767A56527DBBC7C00E8BE5A /* RealmPracticeApp.swift in Sources */,
